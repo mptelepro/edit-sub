@@ -53,6 +53,7 @@ def map(pos):
         ]
     elif(pos==len(tr.HELP_MSG)-2):
         url = "https://t.me/mpazaanbot"
+        url = "https://t.me/mpazaanbot"
         button = [
             [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="=url")], [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaabot")],
             [InlineKeyboardButton(text = '🤖SOURCE CODE🤖', url=url)],
