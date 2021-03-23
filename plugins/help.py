@@ -54,7 +54,7 @@ def map(pos):
         button = [
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")],
             [InlineKeyboardButton(text = '🤖 Source Code', url=url)],
-            [InlineKeyboardButton(text = ''🗣', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '▶️', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
