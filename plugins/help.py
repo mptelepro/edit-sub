@@ -16,7 +16,7 @@ def _start(client, message):
         )
 
 def map(pos):
-    if(pos==1):
+    if(pos==):
         button = [
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
         ]
