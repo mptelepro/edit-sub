@@ -63,6 +63,7 @@ def map(pos):
             [
                 InlineKeyboardButton(text = 'Join Channel', callback_data = f"help+{pos-1}"),
                 InlineKeyboardButton(text = 'OPEN', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = 'NOT', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
