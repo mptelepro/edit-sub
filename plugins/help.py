@@ -52,12 +52,12 @@ def map(pos):
             [InlineKeyboardButton(text = '🤓OWNER🤓', url="https://t.me/Mpazaan")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
-        url = "https://github.com/DamienSoukara/FSub-Heroku"
+        url = "https://t.me/mpazaabot"
         button = [
             [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaabot")],
-            [InlineKeyboardButton(text = '🤖 Source Code', url=url)],
+            [InlineKeyboardButton(text = '🤖 SOURCE CODE '🤖', url=url)],
             [InlineKeyboardButton(text = '😆HELP😆', callback_data = f"help+{pos-1}")],
-            [InlineKeyboardButton(text = '😂GROUP😀', callback_data = f"start+{pos-1}")]
+            [InlineKeyboardButton(text = '😂NO OPEN😀', callback_data = f"start+{pos-1}")]
         ]
     else:
         button = [
