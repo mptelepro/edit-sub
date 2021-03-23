@@ -55,7 +55,7 @@ def map(pos):
         url = "https://github.com/DamienSoukara/FSub-Heroku"
         button = [
             [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaabot")],
-            [InlineKeyboardButton(text = '🤖 SOURCE CODE '🤖', url=url)],
+            [InlineKeyboardButton(text = '🤖SOURCE CODE🤖', url=url)],
             [InlineKeyboardButton(text = '😆HELP😆', callback_data = f"help+{pos-1}")],
             [InlineKeyboardButton(text = '😂NO OPEN😀', callback_data = f"start+{pos-1}")]
         ]
