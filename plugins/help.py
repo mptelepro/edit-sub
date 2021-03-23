@@ -17,7 +17,7 @@ def _start(client, message):
 
 start_callback_filter = filters.create(lambda _, __, query: query.data.startswith('start+'))
 
-@Client.on_callback_query(help_callback_filter)
+@Client.on_callback_query(start_callback_filter)
 def start_answer(client, callback_query):
     chat_id = callback_query.from_user.id
     message_id = callback_query.message.message_id
