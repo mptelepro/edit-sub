@@ -7,6 +7,11 @@ from buttons import Button
 
 logging.basicConfig(level=logging.INFO)
 
+@Client.on_message(filters.command(["start"]))
+async def start(bot, update):
+    await bot.send_message(chat_id=update.chat.id, text=Translation.START_TEXT.format(update.from_user.mention), parse_mode="html", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(Button.START_BUTTONS), reply_to_message_id=update.message_id)
+
+
 @Client.on_message(filters.private & filters.incoming & filters.command(['start']))
 def _start(client, message):
     client.send_message(message.chat.id,
