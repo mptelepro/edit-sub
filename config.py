@@ -23,3 +23,10 @@ class Messages():
       ]
 
       START_MSG = "**Hey! [👋](https://i.imgur.com/SmqQApH.jpg) [{}](tg://user?id={})**\n\n● I Can Force Members To Join A Specific Channel Before Writing Messages In The Group.\n● Learn More At 👉 /help"
+
+      else:
+             first_name = update.effective_user.first_name
+             update.effective_message.reply_photo(START_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),reply_markup=InlineKeyboardMarkup(
+                                                 [[InlineKeyboardButton(text="Help",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text=" 👥 channel.",url="https://t.me/Mothirajinn_bot")],  
+                                                 [InlineKeyboardButton(text="Creater",url="https://t.me/Mothirajinn_bot"),InlineKeyboardButton(text="Mai Source",url="https://t.me/Mothirajinn_bot")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+
