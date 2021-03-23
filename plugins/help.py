@@ -47,7 +47,7 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
+            [InlineKeyboardButton(text = 'Goto', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = "https://github.com/DamienSoukara/FSub-Heroku"
