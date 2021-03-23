@@ -11,7 +11,7 @@ def _start(client, message):
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
         parse_mode="markdown",
         disable_notification = True,
-        reply_markup = InlineKeyboardMarkup(map(2)),
+        reply_markup = InlineKeyboardMarkup(map(3)),
         reply_to_message_id=message.message_id
         )
 
@@ -60,7 +60,7 @@ def map(pos):
     else:
         button = [
             [
-                InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = 'Join Channel', callback_data = f"help+{pos-1}"),
                 InlineKeyboardButton(text = 'OK', callback_data = f"help+{pos+1}")
             ],
         ]
