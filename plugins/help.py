@@ -16,8 +16,9 @@ def _start(client, message):
         )
 
 def map(pos):
-    if(pos==1):
+    if(pos==3):
         button = [
+            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
         ]
@@ -55,13 +56,13 @@ def map(pos):
         button = [
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")],
             [InlineKeyboardButton(text = '🤖 Source Code', url=url)],
-            [InlineKeyboardButton(text = 'Going', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = 'HELP', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
             [
                 InlineKeyboardButton(text = 'Join Channel', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = 'OK', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = 'OPEN', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
