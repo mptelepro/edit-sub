@@ -29,7 +29,7 @@ def start_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '▶️Go', callback_data = "help+2")], [InlineKeyboardButton(text = '▶️Go', callback_data = "help+2")]
+            [InlineKeyboardButton(text = '▶️Go', callback_data = "help+2")], [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")]
         ]
     elif(pos==len(tr.START_MSG)-1):
         url = "https://github.com/DamienSoukara/FSub-Heroku"
