@@ -22,6 +22,8 @@ class Messages():
         "[👨‍💻](https://telegra.ph/file/f2b08ba94ebd139d9da96.jpg) **DEVELOPED BY @AmineSoukara**"
       ]
 
+      START_IMG = "https://telegra.ph/file/dd451b9d186d65a2187d5.jpg"
+
       START_MSG = "**Hey! [👋](https://i.imgur.com/SmqQApH.jpg) [{}](tg://user?id={})**\n\n● I Can Force Members To Join A Specific Channel Before Writing Messages In The Group.\n● Learn More At 👉 /help"
 
       else:
