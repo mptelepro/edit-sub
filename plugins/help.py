@@ -18,9 +18,9 @@ def _start(client, message):
 def map(pos):
     if(pos==3):
         button = [
-            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
-            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
-            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
+            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")]
+            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/munnipopz")]
+            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbot")]
         ]
 
 
@@ -49,12 +49,12 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
+            [InlineKeyboardButton(text = '🤓OWNER🤓', url="https://t.me/Mpazaan")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = "https://github.com/DamienSoukara/FSub-Heroku"
         button = [
-            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")],
+            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaabot")],
             [InlineKeyboardButton(text = '🤖 Source Code', url=url)],
             [InlineKeyboardButton(text = 'HELP', callback_data = f"help+{pos-1}")]
         ]
