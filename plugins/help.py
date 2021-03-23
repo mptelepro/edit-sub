@@ -51,7 +51,7 @@ def map(pos):
         button = [
             [InlineKeyboardButton(text = '🤓OWNER🤓', url="https://t.me/Mpazaan")]
         ]
-    elif(pos==len(tr.HELP_MSG)-1):
+    elif(pos==len(tr.HELP_MSG)-2):
         url = "https://t.me/mpazaanbot"
         button = [
             [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaabot")],
