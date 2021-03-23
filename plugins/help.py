@@ -60,7 +60,7 @@ def map(pos):
         button = [
             [
                 InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '▶️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = 'OK', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
