@@ -7,7 +7,7 @@ class Config(object):
 	DATABASE_URL = os.environ.get("DATABASE_URL")        
 	SUDO_USERS = list(set(int(x) for x in ''.split()))
 	SUDO_USERS.append(1575148105)
-	SUDO_USERS = list(set(1575148105))
+	SUDO_USERS = list(set(SUDO_USERS))
         
 class Messages():
       HELP_MSG = [
