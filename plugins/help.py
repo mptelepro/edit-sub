@@ -48,7 +48,6 @@ def map(pos):
     if(pos==1):
         button = [
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")]
-            [InlineKeyboardButton(text = 'text = '▶️', callback_data = f"help+{pos-1)]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = "https://github.com/DamienSoukara/FSub-Heroku"
