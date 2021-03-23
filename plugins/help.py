@@ -32,17 +32,17 @@ def map(pos):
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")], [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")],
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")], [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")]
         ]
-    elif(pos==len(tr.START_MSG)1):
+    elif(pos==len(tr.START_MSG)-1):
         url = "https://github.com/DamienSoukara/FSub-Heroku"
         button = [
             [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")],
             [InlineKeyboardButton(text = '🤖 Source Code', url=url)],
-            [InlineKeyboardButton(text = '◀️Back', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = ''🤖Back', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '◀️Back', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '🗣 Support Chat_data = f"help+{pos-1}"),
                 InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")
             ],
         ]
