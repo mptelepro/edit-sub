@@ -43,7 +43,7 @@ def map(pos):
         button = [
             [
                 InlineKeyboardButton(text = '◀️Back', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '▶️Go', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/mpazaanbots")
             ],
         ]
     return button
