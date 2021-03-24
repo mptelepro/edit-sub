@@ -2,8 +2,8 @@ import logging
 from config import Messages as tr
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from translation import Translation
-from buttons import Button
+
+
 
 logging.basicConfig(level=logging.INFO)
 
