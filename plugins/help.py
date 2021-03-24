@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 @Client.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_message(
+       await client.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm Telegraph Bot
 I can upload photos or videos to telegraph. Made by @munnipopz 😃
