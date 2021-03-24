@@ -36,7 +36,7 @@ def _help(client, message):
         text = tr.HELP_MSG[1],
         parse_mode="markdown",
         disable_notification = True,
-        reply_markup = InlineKeyboardMarkup(map(4)),
+        reply_markup = InlineKeyboardMarkup(map(1)),
         reply_to_message_id = message.message_id
     )
 
