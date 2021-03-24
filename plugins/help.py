@@ -12,7 +12,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await client.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm FORCE SUBSCRIBE BOT
+               text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
 Made by @m 😃
 Please click /help</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -30,7 +30,7 @@ Please click /help</b>""",
             parse_mode="html")
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['help+']))
+@Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
