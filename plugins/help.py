@@ -12,7 +12,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await client.send_message(
                chat_id=message.chat.id,
-               text="""<b>`HEY There, I'M FORCE SUB BOT 😃`
+               text="""<b>```HEY There, I'M FORCE SUB BOT 😃```
 `PLEASE CLICK` /help</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
