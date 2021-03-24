@@ -29,6 +29,13 @@ Hit help button to find out more about how to use me</b>""",
             disable_web_page_preview=True,        
             parse_mode="html")
 
+@Client.on_message(filters.command("help"))
+async def help(client, message):
+    if message.chat.type == 'private':   
+        await Client.send_message(
+               chat_id=message.chat.id,
+               text="""<b>Telegraph Bot Help!
+
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
