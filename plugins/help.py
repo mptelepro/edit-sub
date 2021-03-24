@@ -7,7 +7,7 @@ from buttons import Button
 
 logging.basicConfig(level=logging.INFO)
 
-@Jebot.on_message(filters.command("start"))
+@Client.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
