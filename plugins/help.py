@@ -7,25 +7,27 @@ from buttons import Button
 
 logging.basicConfig(level=logging.INFO)
 
-@Client.on_message(filters.command(["start"]))
-async def test(client, message):
-        await message.reply_text(
-            text="{text}",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Button 1", url="{https://t.me/mpazaanbots}"),
-                        InlineKeyboardButton("Button 2", url="{https://t.me/mpazaanbots}"),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            "Button 3", url="{https://t.me/mpazaanbots}")
-                    ]
-                ]
-            ),
-            reply_to_message_id=message.message_id
-        )
+@Jebot.on_message(filters.command("start"))
+async def start(client, message):
+   if message.chat.type == 'private':
+       await Jebot.send_message(
+               chat_id=message.chat.id,
+               text="""<b>Hey There, I'm Telegraph Bot
+I can upload photos or videos to telegraph. Made by @munnipopz 😃
+Hit help button to find out more about how to use me</b>""",   
+                            reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "Help", callback_data="help"),
+                                        InlineKeyboardButton(
+                                            "Channel", url="https://t.me/munnipopz")
+                                    ],[
+                                      InlineKeyboardButton(
+                                            "Source Code", url="https://t.me/munnipopz")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
