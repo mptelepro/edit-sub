@@ -7,6 +7,26 @@ from buttons import Button
 
 logging.basicConfig(level=logging.INFO)
 
+@TGraph.on_message(filters.command(["start"]))
+async def test(client, message):
+        await message.reply_text(
+            text="{text}",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("Button 1", url="{https://t.me/mpazaanbots}"),
+                        InlineKeyboardButton("Button 2", url="{https://t.me/mpazaanbots}"),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            "Button 3", url="{https://t.me/mpazaanbots}")
+                    ]
+                ]
+            ),
+            reply_to_message_id=message.message_id
+        )
+
 @Client.on_message(filters.command(["start"]))
 async def start(bot, update):
     await bot.send_message(chat_id=update.chat.id, text=Translation.START_TEXT.format(update.from_user.mention), parse_mode="html", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(Button.START_BUTTONS), reply_to_message_id=update.message_id)
