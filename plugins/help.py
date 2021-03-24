@@ -57,13 +57,13 @@ def map(pos):
         button = [
             [InlineKeyboardButton(text = '🤓OWNER🤓', url="https://t.me/Mpazaan")]
         ]
-    elif(pos==len(tr.HELP_MSG)+2):
+    elif(pos==len(tr.HELP_MSG)-2):
         url = "https://t.me/mpazaanbot"
         button = [
             [InlineKeyboardButton(text = '➕️ ADD ME TO YOUR GROUP ➕️', url="t.me/ForceSubscriber_robot?startgroup=true")], [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaanbot")],
             [InlineKeyboardButton(text = '🤖SOURCE CODE🤖', url=url)],
             [InlineKeyboardButton(text = '😆HELP😆', callback_data = f"help+{pos-1}")],
-            [InlineKeyboardButton(text = '😂NO OPEN😀', callback_data = f"start+{pos-1}")]
+            [InlineKeyboardButton(text = '😂NO OPEN😀', callback_data = f"start+{pos+}")]
         ]
     else:
         button = [
