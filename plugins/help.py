@@ -12,13 +12,12 @@ async def start(client, message):
    if message.chat.type == 'private':
        await client.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm Telegraph Bot
-Made by @m 😃
-Please click /help</b>""",   
+               text="""<b>`HEY There, I'M FORCE SUB BOT 😃`
+`PLEASE CLICK` /help</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "SUPPORT", url="https://t.me/munnipopz"),
+                                            "SUPPORT", url="https://t.me/mpazaan"),
                                         InlineKeyboardButton(
                                             "CHANNEL", url="https://t.me/mpazaanbots")
                                     ],[
@@ -55,20 +54,20 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
+            [InlineKeyboardButton(text = '▶️BACK', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)+1):
         url = "https://github.com/DamienSoukara/FSub-Heroku"
         button = [
-            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")],
+            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/munnipopz")],
             [InlineKeyboardButton(text = '🤖 Source Code', url=url)],
-            [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '◀️PLAY', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '▶️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '◀️PLAY', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '▶️BACK', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
