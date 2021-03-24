@@ -17,7 +17,7 @@ async def start(client, message):
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/Jin_Jin_robot?startgroup=true"),
+                                            "➕️ ADD ME ➕️", url="t.me/Jin_Jin_robot?startgroup=true"),
                                         InlineKeyboardButton(
                                             "CHANNEL", url="https://t.me/mpazaanbots")
                                     ],[
