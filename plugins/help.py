@@ -15,7 +15,7 @@ async def test(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Button 1", url="{https://t.me/mpazaanbots}")
+                        InlineKeyboardButton("Button 1", url="{https://t.me/mpazaanbots}"),
                         InlineKeyboardButton("Button 2", url="{https://t.me/mpazaanbots}"),
                     ],
                     [
