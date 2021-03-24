@@ -12,7 +12,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await client.send_message(
                chat_id=message.chat.id,
-               text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
+               text="""<b>Hey There, I'm Telegraph Bot
 Made by @m 😃
 Please click /help</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -57,7 +57,7 @@ def map(pos):
         button = [
             [InlineKeyboardButton(text = '🤓OWNER🤓', url="https://t.me/Mpazaan")]
         ]
-    elif(pos==len(tr.HELP_MSG)-2):
+    elif(pos==len(tr.HELP_MSG)+2):
         url = "https://t.me/mpazaanbot"
         button = [
             [InlineKeyboardButton(text = '➕️ ADD ME TO YOUR GROUP ➕️', url="t.me/ForceSubscriber_robot?startgroup=true")], [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaanbot")],
