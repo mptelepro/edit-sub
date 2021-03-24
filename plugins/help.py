@@ -29,12 +29,6 @@ Hit help button to find out more about how to use me</b>""",
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Client.on_message(filters.command("help"))
-async def help(client, message):
-    if message.chat.type == 'private':   
-        await Client.send_message(
-               chat_id=message.chat.id,
-               text="""<b>Telegraph Bot Help!
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
@@ -46,7 +40,7 @@ def _help(client, message):
         reply_to_message_id = message.message_id
     )
 
-help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help+'))
+help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help'))
 
 @Client.on_callback_query(help_callback_filter)
 def help_answer(client, callback_query):
