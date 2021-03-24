@@ -40,7 +40,7 @@ def _help(client, message):
         reply_to_message_id = message.message_id
     )
 
-help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help'))
+help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help+'))
 
 @Client.on_callback_query(help_callback_filter)
 def help_answer(client, callback_query):
@@ -55,9 +55,9 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '🤓OWNER🤓', url="https://t.me/Mpazaan")]
+            [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
         ]
-    elif(pos==len(tr.HELP_MSG)-2):
+    elif(pos==len(tr.HELP_MSG)+1)
         url = "https://t.me/mpazaanbot"
         button = [
             [InlineKeyboardButton(text = '➕️ ADD ME TO YOUR GROUP ➕️', url="t.me/ForceSubscriber_robot?startgroup=true")], [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaanbot")],
