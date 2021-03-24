@@ -29,6 +29,49 @@ Hit help button to find out more about how to use me</b>""",
             disable_web_page_preview=True,        
             parse_mode="html")
 
+@Client.on_message(filters.command("help"))
+async def help(client, message):
+    if message.chat.type == 'private':   
+        await Client.send_message(
+               chat_id=message.chat.id,
+               text="""<b>Telegraph Bot Help!
+Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
+~ @Infinity_BOTs</b>""",
+        reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "Back", callback_data="start"),
+                                        InlineKeyboardButton(
+                                            "About", callback_data="about"),
+                                  ],[
+                                        InlineKeyboardButton(
+                                            "Source Code", url="https://t.me/munnipopz")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
+
+@Client.on_message(filters.command("about"))
+async def about(client, message):
+    if message.chat.type == 'private':   
+        await Client.send_message(
+               chat_id=message.chat.id,
+               text="""<b>About Telegraph Bot!</b>
+<b>♞ Developer:</b> <a href="https://t.me/munnipopz</a>
+<b>♞ Support:</b> <a href="https://t.me/munnipopz">Infinity BOTs Support</a>
+<b>♞ Library:</b> <a href="https://t.me/munnipopz">Pyrogram</a>
+<b>~ @munnipopz</b>""",
+     reply_markup=InlineKeyboardMarkup(
+                                [[
+                                        InlineKeyboardButton(
+                                            "Back", callback_data="help"),
+                                        InlineKeyboardButton(
+                                            "Source Code", url="https://t.me/munnipopz")
+                                    ]]
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
+
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
