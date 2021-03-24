@@ -30,7 +30,7 @@ Please click /help</b>""",
             parse_mode="html")
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['help']))
+@Client.on_message(filters.private & filters.incoming & filters.command(['help+']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
