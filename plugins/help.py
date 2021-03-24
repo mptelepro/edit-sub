@@ -57,21 +57,18 @@ def map(pos):
         button = [
             [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
         ]
-    elif(pos==len(tr.HELP_MSG)+1)
-        url = "https://t.me/mpazaanbot"
+    elif(pos==len(tr.HELP_MSG)+1):
+        url = "https://github.com/DamienSoukara/FSub-Heroku"
         button = [
-            [InlineKeyboardButton(text = '➕️ ADD ME TO YOUR GROUP ➕️', url="t.me/ForceSubscriber_robot?startgroup=true")], [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaanbot")],
-            [InlineKeyboardButton(text = '🤖SOURCE CODE🤖', url=url)],
-            [InlineKeyboardButton(text = '😆HELP😆', callback_data = f"help+{pos-1}")],
-            [InlineKeyboardButton(text = '😂NO OPEN😀', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '🗣 Support Chat', url="https://t.me/damienhelp")],
+            [InlineKeyboardButton(text = '🤖 Source Code', url=url)],
+            [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '😇FIRST😇', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = '😈SECOND😈', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '▶️', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
-
-
