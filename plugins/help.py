@@ -63,7 +63,7 @@ def map(pos):
             [InlineKeyboardButton(text = '➕️ ADD ME TO YOUR GROUP ➕️', url="t.me/ForceSubscriber_robot?startgroup=true")], [InlineKeyboardButton(text = '😈SUPPORT CHAT😈', url="https://t.me/mpazaanbot")],
             [InlineKeyboardButton(text = '🤖SOURCE CODE🤖', url=url)],
             [InlineKeyboardButton(text = '😆HELP😆', callback_data = f"help+{pos-1}")],
-            [InlineKeyboardButton(text = '😂NO OPEN😀', callback_data = f"help+{pos+2}")]
+            [InlineKeyboardButton(text = '😂NO OPEN😀', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
