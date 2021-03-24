@@ -27,30 +27,6 @@ async def test(client, message):
             reply_to_message_id=message.message_id
         )
 
-@Client.on_message(filters.command(["start"]))
-async def start(bot, update):
-    await bot.send_message(chat_id=update.chat.id, text=Translation.START_TEXT.format(update.from_user.mention), parse_mode="html", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(Button.START_BUTTONS), reply_to_message_id=update.message_id)
-
-
-@Client.on_message(filters.private & filters.incoming & filters.command(['start']))
-def _start(client, message):
-    client.send_message(message.chat.id,
-        text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
-        parse_mode="markdown",
-        disable_notification = True,
-        reply_markup = InlineKeyboardMarkup(map(3)),
-        reply_to_message_id=message.message_id
-        )
-
-def map(pos):
-    if(pos==3):
-        button = [
-            [InlineKeyboardButton(text = '🗣 FIRST', url="https://t.me/mpazaanbots")]
-            [InlineKeyboardButton(text = '🗣 FRIST', url="https://t.me/munnipopz")]
-            [InlineKeyboardButton(text = '🗣 FIRST', url="https://t.me/mpazaanbot")]
-        ]
-
-
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
